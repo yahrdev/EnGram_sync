@@ -1,1 +1,4 @@
-# EnGram_sync
+The API generates tests for English grammar learning and can be used as a backend for English learning-related projects.
+The app was built using Flask and has two endpoints: gettests and updatestatus. The first endpoint generates one test each time it's called, while the second updates the date and time when the test was displayed on the frontend.
+When the gettests endpoint is called, the app retrieves a fixed number of tests from the database and stores them in the cache. Users receive one test from the cache per call, so the app avoids making database requests for every endpoint call. The updatestatus endpoint ensures test variation by sorting the tests by the datetime_shown field, ensuring users always receive the oldest available test.
+SQLAlchemy, Flask-Migrate, and PyMySQL were used to interact with the MySQL database. Redis was used for cache management. Other libraries include Pydantic, Flask-RESTX, pytest for endpoint testing, and more.
