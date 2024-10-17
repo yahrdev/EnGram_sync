@@ -51,3 +51,36 @@ flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
 ```
+You can use that migration file which is provided in this repository.
+Also populate the database with data. 
+
+### 6. Set up Redis
+
+Download Redis and place the folder on disk C (for example). Open a command prompt and navigate to the Redis folder:
+
+```bash
+cd C:\Redis
+```
+
+Set up configuration files. You can either modify the redis.windows.conf or create two copies: redis-prod.conf and redis-test.conf, and specify different ports in each file.
+Start Redis servers:
+
+```bash
+redis-server.exe redis-test.conf
+```
+
+```bash
+redis-server.exe redis-prod.conf
+```
+
+### 7. Run the application
+
+```bash
+python api/app.py
+```
+
+### 8. Testing
+
+```bash
+pytest -v tests/test_api.py  
+```
