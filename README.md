@@ -51,7 +51,7 @@ flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
 ```
-You can use that migration file which is provided in this repository.
+You can use that [Initial Migration Script](https://github.com/yahrdev/EnGram_sync/blob/main/api/migrations/versions/3e4caf632902_initial_migration.py) which is provided in this repository.
 Also populate the database with data. 
 
 ### 6. Set up Redis
