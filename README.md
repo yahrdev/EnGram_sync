@@ -84,3 +84,5 @@ python api/app.py
 ```bash
 pytest -v tests/test_api.py  
 ```
+
+And check Swagger: http://127.0.0.1:8000/docs
