@@ -5,7 +5,7 @@ The app was built using **Flask** and has two endpoints: `gettests` and `updates
 - The first endpoint generates one test each time it's called.
 - The second endpoint updates the date and time when the test was displayed on the frontend.
 
-When the `gettests` endpoint is called, the app retrieves a fixed number of tests from the database and stores them in the cache. Users receive one test from the cache per call, which helps reduce database requests for every endpoint call. The retrieved tests are sorted by the datetime_shown field, ensuring users always receive the oldest available test. The `updatestatus` endpoint simply records the datetime when a test is shown, keeping the database up to date.
+When the `gettests` endpoint is called, the app retrieves a fixed number of tests from the database and stores them in the cache. Users receive one test from the cache per call, which helps reduce database requests for every endpoint call. The tests are sorted by the datetime_shown field, so the test that was shown the longest time ago is displayed first. The `updatestatus` endpoint simply records the datetime when a test is shown, keeping the database up to date.
 
 ## Technologies Used
 
